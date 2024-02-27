@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return response()->json([
+    'Hello' => 'Word',
+    'Felipinho' => 'Fofo',
+]);
+});
+
+Route::post('/teste', function (Request $req) {
+    return response()->json([
+    	"request"=>$req
+]);
 });
