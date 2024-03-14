@@ -15,9 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->string('telefone');
-            $table->integer('RM');
-            $table->string('CPF');
+            $table->integer('rm');
+            $table->string('cpf');
             $table->string('endereco');
+            $table->string('sobrenome');
             $table->timestamps();
         });        
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('alunos');  
     }
 };
